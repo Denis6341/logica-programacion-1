@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #CAD593;
+}
+
+header { 
+    text-align:justify;
+    padding: 10px;
+    background-color: #87A330;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Zalando Sans Expanded", sans-serif;;
+    margin-top: 0;
+}
+
+.description {
+    font-family: "Playfair Display", serif;;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.instructions {
+    font-family: "Libertinus Serif Display", system-ui;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+ul {
+     font-family: "Libertinus Serif Display", system-ui;;
+    list-style-type: square;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.button-start {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-family: "Source Code Pro", monospace;
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #273b06;
+    background-color: #153f06;
+    color: #CAD593;
+}
+
+button:hover {
+    background-color: #153f06;
+    border: 2px solid #CAD593;
+    translate: -3px;
+}
+
+.result {
+    font-family: "Source Code Pro", monospace;
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #1f3102;
+    background-color: #153f06;
+    color: #CAD593;
+}
