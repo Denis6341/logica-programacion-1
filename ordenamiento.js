@@ -1,7 +1,5 @@
 let arrayNumbers = [];
 let mayor;
-let ascendentNumbers = [];
-let descendentNumbers = [];
 
 function validateInput(input) {
     input = input.trim();
@@ -34,27 +32,29 @@ function orderArray() {
             }
         }
     }
-    return arrayNumbers;
+    return [...arrayNumbers]; //returns a copy 
 }
 
-function identifyNumbers(ascendentNumbers) {
-    if (ascendentNumbers[0] === ascendentNumbers[1] || ascendentNumbers[0] === ascendentNumbers[2] || ascendentNumbers[1] === ascendentNumbers[2]) {
-        printMessage("equals-numbers", "At least two numbers are equal." , "");
-    }
+function identifyNumbers(arr) {
+    if (arr[0] === arr[1] || arr[0] === arr[2] || arr[1] === arr[2]) {
+        printMessage("equals-numbers", "AT LEATS TWO NUMBERS ARE EQUAL." , [""]);
+    } else printMessage("equals-numbers", "THERE ARE NOT EQUAL NUMBERS." , [""]);
 }
 
 function printMessage(id, message, value) {
     const result = document.getElementById(id);
-    result.innerHTML = (`${message} <br>${value.join(" ,   ")}`);
+    result.innerHTML = `${message} <br>${Array.isArray(value) ? value.join(" , ") : value}`;
 }
 
 function startProgram() {
     arrayNumbers = inputNumbers();
     printMessage("input-array", "Your numbers are: ", arrayNumbers);
-    let ascendentNumbers = orderArray();
-    identifyNumbers(ascendentNumbers);
-    printMessage("ascendent", "Your numbers in ascending order are: ", ascendentNumbers);
-    let descendentNumbers = ascendentNumbers.reverse();
-    printMessage("descendent", "Your numbers in descending order are: ", descendentNumbers);
+
+    let ascendent = orderArray();
+    identifyNumbers(ascendent);
+    printMessage("ascendent", "Your numbers in ascending order are: ", ascendent);
+
+    let descendent = ascendent.reverse();
+    printMessage("descendent", "Your numbers in descending order are: ", descendent);
 }
 
